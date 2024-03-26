@@ -1,6 +1,6 @@
 import './Home.css'
 import "../../public/dating.jpg";
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 import BookCards from '../Components/BookCards';
 
 const Home = () => {
@@ -18,7 +18,7 @@ const Home = () => {
                  <div>
                      <h1 className="text-5xl font-bold pb-10">Books to freshen <br /> up your bookshelf</h1>
       
-                     <button className="btn-view btn  ">View The List</button>
+                     <Link to='/ListedBooks'><button className="btn-view btn  ">View The List</button></Link>
                  </div>
               </div>
             </div>
