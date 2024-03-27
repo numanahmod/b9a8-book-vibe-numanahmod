@@ -17,11 +17,13 @@ import Read from './Components/Read';
 import Wishlist from './Components/Wishlist';
 import OnlineClasses from './Pages/OnlineClasses';
 import About from './Pages/About';
+import ErrorPage from './Components/ErrorPage';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <MainLayout/>,
+    errorElement:<ErrorPage/>,
     children:[
       {
         index: true,
