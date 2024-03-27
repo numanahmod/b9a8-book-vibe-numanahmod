@@ -1,5 +1,8 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import '../Components/Navbar.css'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { saveReadBooks } from "../Components/Utility/localStorage";
 
 const Book = () => {
     const books = useLoaderData();
@@ -10,6 +13,14 @@ const Book = () => {
   
     
     const {image, bookName, author, totalPages, rating, yearOfPublishing, category, tags, review,publisher } =  id; 
+
+    const handleRead =  () => {
+        saveReadBooks(Id);
+        toast('The book is successfully added to read list')
+    }
+    const handleWishlist = () => {
+        toast('The book is successfully added to the Wishlist')
+    }
 
     return (
         <section className="">
@@ -45,9 +56,10 @@ const Book = () => {
                     </div>
                 </div>
 			<div className=" flex flex-col space-y-4 sm:items-center sm:justify-center sm:flex-row sm:space-y-0 sm:space-x-4 lg:justify-start">
-				<a rel="noopener noreferrer" href="#" className="btn btn1 px-8 py-3 text-lg font-semibold rounded">Read </a>
-				<a rel="noopener noreferrer" href="#" className="btn btn2 px-8 py-3 text-lg font-semibold border rounded ">Wishlist</a>
+				<a rel="noopener noreferrer" href="#" className="btn btn1 px-8 py-3 text-lg font-semibold rounded"> <button onClick={handleRead}>Read</button> </a>
+				<a rel="noopener noreferrer" href="#" className="btn btn2 px-8 py-3 text-lg font-semibold border rounded "><button onClick={handleWishlist}>Wishlist</button></a>
 			</div>
+            <ToastContainer /> 
 		</div>
 	</div>
 </section>

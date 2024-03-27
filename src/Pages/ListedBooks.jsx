@@ -1,8 +1,13 @@
-import { Link } from 'react-router-dom';
+import { Link, Outlet,  } from 'react-router-dom';
 import '../Components/Navbar.css'
 import { useState } from 'react';
 
+
 const ListedBooks = () => {
+    
+
+
+
     const [tabIndex, setTabIndex] = useState(true)
     return (
         <div className="">
@@ -13,7 +18,7 @@ const ListedBooks = () => {
 
             <div className="flex items-center -mx-4 overflow-x-auto overflow-y-hidden sm:justify-start flex-nowrap ml-10">
 	<Link 
-    // to=''
+    to=''
     onClick={() => setTabIndex(true)}
     className={`flex items-center flex-shrink-0 px-5 py-3 space-x-2 ${tabIndex === true? 'border border-b-0' : 'border-b'} rounded-t-lg border-gray-400`}>
 		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4">
@@ -22,7 +27,7 @@ const ListedBooks = () => {
 		<span>Read books </span>
 	</Link>
 	<Link 
-    // to={`wishlist`}
+    to={`wishlist`}
     onClick={() => setTabIndex(false)}
     className={`flex items-center flex-shrink-0 px-5 py-3 space-x-2 ${tabIndex===false? 'border border-b-0' : 'border-b'} rounded-t-lg border-gray-400`}>
 		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4">
@@ -34,6 +39,7 @@ const ListedBooks = () => {
 	
 	
 </div>
+<Outlet/>
         </div>
     );
 };

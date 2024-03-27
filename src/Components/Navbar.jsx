@@ -14,6 +14,8 @@ const Navbar = () => {
       <NavLink to='/' className=" "> Home </NavLink>
         <NavLink to='/ListedBooks' className=""> Listed Books </NavLink>
         <NavLink to='/PagesToRead'className=" "> Pages to Read </NavLink>
+        <NavLink to='/OnlineClasses'className=" "> Online Classes </NavLink>
+        <NavLink to='/About'className=" "> About </NavLink>
       </ul>
     </div>
     <a className="btn btn-ghost text-xl font-bold">Book Vibe</a>
@@ -23,7 +25,8 @@ const Navbar = () => {
         <NavLink to='/' className={({isActive})=> isActive? 'btn font-bold btnc':'font-bold btn'}> Home </NavLink>
         <NavLink to='/ListedBooks' className={({isActive})=> isActive? 'btn font-bold btnc':'font-bold btn'}> Listed Books </NavLink>
         <NavLink to='/PagesToRead'className={({isActive})=> isActive? 'btn  font-bold btnc':'font-bold btn'}> Pages to Read </NavLink>
-        
+        <NavLink to='/OnlineClasses'className={({isActive})=> isActive? 'btn  font-bold btnc':'font-bold btn'}> Online Classes </NavLink>
+        <NavLink to='/About'className={({isActive})=> isActive? 'btn  font-bold btnc':'font-bold btn'}> Free PDF Books  </NavLink>
     </ul>
   </div>
   <div className="navbar-end gap-3">
