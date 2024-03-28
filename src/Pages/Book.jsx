@@ -3,6 +3,7 @@ import '../Components/Navbar.css'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { saveReadBooks } from "../Components/Utility/localStorage";
+import { saveWishlist } from "../Components/Utility/localStorageWishlist";
 
 const Book = () => {
     const books = useLoaderData();
@@ -19,6 +20,7 @@ const Book = () => {
         toast('The book is successfully added to read list')
     }
     const handleWishlist = () => {
+        saveWishlist(idInt);
         toast('The book is successfully added to the Wishlist')
     }
 
