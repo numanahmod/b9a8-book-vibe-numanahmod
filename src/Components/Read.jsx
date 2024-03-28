@@ -8,6 +8,10 @@ import { getStoredReadBooks } from "./Utility/localStorage";
 const Read = () => {
     const books = useLoaderData();
     const [ listedReadBooks, setListedReadBooks] = useState([]);
+    
+
+    
+
 
      useEffect( () => {
         const storedBooksId = getStoredReadBooks();
@@ -17,9 +21,10 @@ const Read = () => {
             const booksRead = books.filter(book => storedBooksId.includes(book.Id) );
 
             setListedReadBooks(booksRead);
+            
             // console.log(books, storedBooksId, booksRead);
         }
-     },[]);
+     },[books]);
 
      
     
