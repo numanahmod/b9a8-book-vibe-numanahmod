@@ -66,7 +66,7 @@ const Read = () => {
                         <div className="flex col-span-3 gap-5 mt-5 pt-2">
                        <div className="pt-2">category: <span className="font-bold"> {b.category} </span></div>
                        <div className="pt-2">  Rating:   <span className="font-bold"> {b.rating}</span> </div>
-                       <div> <a rel="noopener noreferrer" href="#" className="btn btn1 px-8 py-3 text-lg font-semibold rounded"> <Link  > <button> View Details </button> </Link> </a> </div>
+                       <div> <a rel="noopener noreferrer" href="#" className="btn btn1 px-8 py-3 text-lg font-semibold rounded"> <Link to={`/book/${b.Id}`} > <button> View Details </button> </Link> </a> </div>
                         </div>
                     
                 </div>
