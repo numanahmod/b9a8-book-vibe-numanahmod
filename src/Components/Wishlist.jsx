@@ -2,8 +2,8 @@
 
 const Wishlist = () => {
     return (
-        <div>
-            ami Wishlist e achi tumi aw suna 
+        <div className="ml-44 mt-12">
+            ami Wishlist e achi 
         </div>
     );
 };
