@@ -8,14 +8,14 @@ const Book = () => {
     const books = useLoaderData();
  
     const {Id} = useParams();
-
-    const id = books.find((i) => i.Id == Id);
+    const idInt = parseInt(Id)
+    const id = books.find((i) => i.Id == idInt);
   
     
     const {image, bookName, author, totalPages, rating, yearOfPublishing, category, tags, review,publisher } =  id; 
 
     const handleRead =  () => {
-        saveReadBooks(Id);
+        saveReadBooks(idInt);
         toast('The book is successfully added to read list')
     }
     const handleWishlist = () => {
