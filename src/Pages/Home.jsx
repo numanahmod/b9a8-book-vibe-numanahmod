@@ -1,5 +1,6 @@
 import './Home.css'
-import "../../public/dating.jpg";
+
+import dating from '../../public/dating.jpg'
 import { Link, useLoaderData } from 'react-router-dom';
 import BookCards from '../Components/BookCards';
 
@@ -14,7 +15,7 @@ const Home = () => {
             
             <div className="min-h-[calc(100vh-84px)] bg-base-200 m-12 rounded-lg pt-20 ">
                 <div className="hero-content flex-col lg:flex-row-reverse gap-80">
-                     <img src="../../public/dating.jpg" className="max-w-sm rounded-lg shadow-2xl" />
+                     <img src={dating} className="max-w-sm rounded-lg shadow-2xl" />
                  <div>
                      <h1 className="text-5xl font-bold pb-10">Books to freshen <br /> up your bookshelf</h1>
       
